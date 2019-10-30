@@ -33,12 +33,6 @@ const webpackConfig = {
     publicPath,
     filename: "[name].js",
   },
-  resolve: {
-    alias: {
-      "react-dom": "@hot-loader/react-dom",
-    },
-  },
-
   node: {
     dgram: "empty",
     fs: "empty",
@@ -53,6 +47,9 @@ const webpackConfig = {
         extensions: [".js", ".jsx", ".ts", ".tsx"],
       }),
     ],
+    alias: {
+      "react-dom": "@hot-loader/react-dom",
+    },
     extensions: [".js", ".jsx", ".ts", ".tsx", ".json"],
   },
   module: {
